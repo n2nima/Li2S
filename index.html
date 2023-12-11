@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,7 @@
     <section id="header" class="bg-primary shadow-lg d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-6 logo"><img
-                        src="assets/logo.png"
-                        alt="logo" width="60px">
-                </div>
-                <div class="col-6 d-flex justify-content-end align-items-center">
+                <div class="col-6 d-flex justify-content-start align-items-center">
                     <ul class="d-flex justify-content-end align-items-center">
                         <a href="#">
                             <li class="mx-4">Panel<i class="uil uil-tachometer-fast-alt mx-1"></i></li>
@@ -27,10 +23,67 @@
                         </a>
                     </ul>
                 </div>
+                <div class="col-6 logo d-flex justify-content-end align-items-center"><img
+                        src="assets/logo.png"
+                        alt="logo" width="60px">
+                </div>
             </div>
         </div>
     </section>
-    <section id="main" class="d-flex"></section>
+    <section id="main" class="d-flex">
+        <div class="submain shadow-lg d-flex justify-content-center align-items-center">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">LOGIN</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="submain shadow-lg d-flex justify-content-center align-items-center">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">REGISTER</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
