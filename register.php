@@ -32,6 +32,10 @@ if (
   } else {
     $err = "Password does not match.";
   }
+} else {
+  if (!empty($_POST)) {
+    $err = "Please fill all inputs.";
+  }
 }
 ?>
 
