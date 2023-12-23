@@ -1,11 +1,10 @@
 <?php
-session_start();
 require 'func/_connect.php';
 require 'func/helper.php';
 $err = '';
 global $conn;
 
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
   unset($_SESSION['user']);
 }
 

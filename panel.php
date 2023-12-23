@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'func/_connect.php';
 require 'func/helper.php';
 // require 'func/check_login.php';

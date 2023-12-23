@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "func/helper.php";
 ?>
 <section id="header" class="bg-primary shadow-lg d-flex align-items-center">
@@ -10,17 +11,28 @@ require_once "func/helper.php";
                 <span class="text-light">a small, smart, simple link shortener.</span>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-                <div class="in">
-                    <a href="#" class="text-light text-decoration-none">Hello <span>Nima</span><i class="uil uil-user ms-1"></i></a>
-                    <span class="mx-2 text-light">/</span>
-                    <a href="<?= url('func/logout.php') ?>" class="text-light text-decoration-none">Logout<i class="uil uil-arrow-from-right ms-1"></i></a>
-                </div>
+                <?php
+                if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
+                ?>
+                    <div class="in">
+                        <a href="#" class="text-light text-decoration-none">Hello <span>Nima</span><i class="uil uil-user ms-1"></i></a>
+                        <span class="mx-2 text-light">/</span>
+                        <a href="<?= url('func/logout.php') ?>" class="text-light text-decoration-none">Logout<i class="uil uil-arrow-from-right ms-1"></i></a>
+                    </div>
+                <?php
+                } else {
+                ?>
+                    <div class="out">
+                        <a href="./register.php" class="text-light text-decoration-none">Register<i class="uil uil-folder-check ms-1"></i></a>
+                        <span class="mx-2 text-light">/</span>
+                        <a href="login.php" class="text-light text-decoration-none">Login<i class="uil uil-left-arrow-to-left ms-1"></i></a>
+                    </div>
+                <?php
+                }
+                ?>
 
-                <div class="out">
-                    <a href="./register.php" class="text-light text-decoration-none">Register<i class="uil uil-folder-check ms-1"></i></a>
-                    <span class="mx-2 text-light">/</span>
-                    <a href="login.php" class="text-light text-decoration-none">Login<i class="uil uil-left-arrow-to-left ms-1"></i></a>
-                </div>
+
+
 
             </div>
         </div>
