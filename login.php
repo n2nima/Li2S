@@ -18,7 +18,7 @@ if (
   $user = $statement->fetch();
   if ($user !== false) {
     if (password_verify($_POST['password'], $user->password)) {
-      $_SESSION['user'] = $user->email;
+      $_SESSION['user'] = "nima";
       redirect('panel.php');
     } else {
       $err = "Email or Password incorrect.";

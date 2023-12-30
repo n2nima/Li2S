@@ -1,8 +1,16 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
-    redirect('login.php');
-} else {
-    echo "err.";
+function checkLogin()
+{
+    if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
+        // return true;
+        echo "true";
+    } else {
+        // return false;
+        echo "false";
+    }
 }
+
+
+checkLogin();

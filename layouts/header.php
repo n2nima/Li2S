@@ -30,10 +30,6 @@ require_once "func/helper.php";
                 <?php
                 }
                 ?>
-
-
-
-
             </div>
         </div>
     </div>
